@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hello Section (Welcome Section) */
+.hello {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    background-color: #fff;
+}
+
+/* Presentation Text Section */
+.present {
+    max-width: 500px;
+    color: #333;
+}
+
+.present h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.present p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Buttons Group */
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn {
+    background-color: #FF9900;
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: #e68a00;
+}
+
+.more-btn {
+    background-color: #555;
+    color: white;
+}
+
+.more-btn:hover {
+    background-color: #333;
+}
+
+/* Image Section */
+.side {
+    flex: 1;
+}
+
+.guy {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Caractéristiques Section */
+.caract {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.caract h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Grid layout for features elements */
+.elements-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 elements per row */
+    gap: 20px;
+}
+
+.element {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.element:hover {
+    background-color: #FF9900;
+    transform: translateY(-5px);
+}
+
+.text h3 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .elements-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 elements per row for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hello {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .present {
+        margin-bottom: 20px;
+    }
+
+    .side {
+        margin-top: 20px;
+    }
+
+    .elements-container {
+        grid-template-columns: 1fr; /* 1 element per row for mobile screens */
+    }
+}

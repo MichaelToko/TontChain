@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { ton_backend } from 'declarations/ton_backend';
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Inscription from './Inscription';
-import CreerTontine from './CreatTontine';
-import UtilisateurTontine from './Hole';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import SignInPage from './Inscription';
+import CreatTontine from './CreatTontine';
+import DashboardPage from './Hole';
+import HomePage from './Accueil';
 
 function App() {
   const [greeting, setGreeting] = useState('');
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <Router>
-      <main>
+      {/* <main>
         <nav>
           <ul>
             <li><Link to="/">Accueil</Link></li>
@@ -27,14 +28,13 @@ function App() {
             <li><Link to="/creer-tontine">Créer une Tontine</Link></li>
             <li><Link to="/utilisateur-tontine">Utilisateur Tontine</Link></li>
           </ul>
-        </nav>
+        </nav> */}
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/inscription" element={<Inscription />} />
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/inscription" element={<SignInPage/>} />
           <Route path="/creer-tontine" element={<CreatTontine />} />
-          <Route path="/utilisateur-tontine" element={<UtilisateurTontine tontineId={1} />} />
+          <Route path="/utilisateur-tontine" element={<DashboardPage tontineId={1} />} />
         </Routes>
-      </main>
     </Router>
   );
 }

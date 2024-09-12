@@ -1,0 +1,96 @@
+/* Style général pour la navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFFFF; /* Fond blanc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 50px;  /* Marge à gauche pour le logo */
+    padding-right: 50px; /* Marge à droite pour les boutons */
+}
+
+/* Section gauche - logo */
+.navbar-left .navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Tont - en noir */
+.navbar-left .logo-tont {
+    color: #000000; /* Noir */
+}
+
+/* Chain - en orange */
+.navbar-left .logo-chain {
+    color: #FF9900; /* Orange */
+}
+
+/* Section centrale - liens */
+.navbar-center .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.navbar-center .navbar-links li {
+    display: inline;
+}
+
+.navbar-center .navbar-links a {
+    color: #000000; /* Noir pour les liens */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-center .navbar-links a:hover {
+    color: #FF9900; /* Survol des liens en orange */
+}
+
+/* Section droite - boutons */
+.navbar-right .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-signup {
+    background-color: #FF9900;
+    color: white;
+}
+
+.btn-login {
+    background-color: #555;
+    color: white;
+    margin-right: 90px; /* Marge à droite pour le bouton "Se connecter" */
+}
+
+.btn-signup:hover, .btn-login:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-center .navbar-links {
+        display: none;
+    }
+    
+    .navbar-left {
+        flex: 1;
+    }
+    
+    .navbar-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
